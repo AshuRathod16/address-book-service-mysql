@@ -1,1 +1,21 @@
 "-----Welcome to Address Book System MySQL Program-----"
+
+-------------------------------------------------
+UC1 -> Create a database for address book service
+-------------------------------------------------
+mysql> CREATE DATABASE address_book_service;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> show databases;
++----------------------+
+| Database             |
++----------------------+
+| address_book_service |
+| information_schema   |
+| mysql                |
+| payroll_service      |
+| performance_schema   |
+| sys                  |
+| world                |
++----------------------+
+7 rows in set (0.01 sec)
