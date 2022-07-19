@@ -127,3 +127,31 @@ mysql> SELECT * FROM address_book WHERE city = 'Mumbai' or state = 'Maharashtra'
 | Vishangi  | Dabir    | Panvel    | Mumbai  | Maharashtra | 11254 |       123455 | vishangi@gmail.com |
 +-----------+----------+-----------+---------+-------------+-------+--------------+--------------------+
 2 rows in set (0.00 sec)
+
+---------------------------------------------------------------
+UC7 -> Retrieved size of table of address book service database
+---------------------------------------------------------------
+
+mysql> SELECT COUNT(city) FROM address_book;
++-------------+
+| COUNT(city) |
++-------------+
+|           2 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT COUNT(state) FROM address_book;
++--------------+
+| COUNT(state) |
++--------------+
+|            2 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT city,state,COUNT(*) FROM address_book;
++---------+-------------+----------+
+| city    | state       | COUNT(*) |
++---------+-------------+----------+
+|  Mumbai | Maharashtra |        2 |
++---------+-------------+----------+
+1 row in set (0.00 sec)
