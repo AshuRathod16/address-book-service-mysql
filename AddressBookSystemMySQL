@@ -51,3 +51,24 @@ mysql> describe address_book;
 | email_Id     | varchar(30)  | NO   |     | NULL    |       |
 +--------------+--------------+------+-----+---------+-------+
 8 rows in set (0.01 sec)
+
+----------------------------------------------------------------
+UC3 -> Added contacts to table of address book service database
+----------------------------------------------------------------
+
+mysql>  INSERT INTO address_book(firstName,lastName,address,city,state,zip,phone_Number,email_Id)VALUES
+    -> ('Ashwini','Rathod','Kalyan','Mumbai',' Maharashtra',45689,968940,'rashwini510@gmail.com'),
+    -> ('Akanksha','Jadhav','Ghatkopar',' Mumbai','Maharashtra',12345,1234567890,'ak@gamil.com'),
+    -> ('Vishangi','Dabir','Panvel','Mumbai','Maharashtra',11254,123455,'vishangi@gmail.com');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM address_book;
++-----------+----------+-----------+---------+--------------+-------+--------------+-----------------------+
+| firstName | lastName | address   | city    | state        | zip   | phone_Number | email_Id              |
++-----------+----------+-----------+---------+--------------+-------+--------------+-----------------------+
+| Ashwini   | Rathod   | Kalyan    | Mumbai  |  Maharashtra | 45689 |       968940 | rashwini510@gmail.com |
+| Akanksha  | Jadhav   | Ghatkopar |  Mumbai | Maharashtra  | 12345 |   1234567890 | ak@gamil.com          |
+| Vishangi  | Dabir    | Panvel    | Mumbai  | Maharashtra  | 11254 |       123455 | vishangi@gmail.com    |
++-----------+----------+-----------+---------+--------------+-------+--------------+-----------------------+
+3 rows in set (0.00 sec)
