@@ -262,3 +262,27 @@ mysql> SELECT COUNT(contactType) FROM address_book WHERE contactType = 'Friend';
 |                  1 |
 +--------------------+
 1 row in set (0.00 sec)
+
+--------------------------------------------------------
+UC11 ->  Ability to add person to both Friend and Family
+--------------------------------------------------------
+
+mysql> INSERT INTO address_book(firstName,lastName,address,city,state,zip,phone_Number,email_Id,bookName,contactType)VALUES
+    -> ('Neha','Patel','Dhule','Dhule','Maharshtra',424002,785885,'pneha@gmail.com','NP','Friend');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO address_book(firstName,lastName,address,city,state,zip,phone_Number,email_Id,bookName,contactType)VALUES
+    -> ('Jayesh','Rathod','Dhule','Dhule','Maharashtra',42446,85575,'jsrathod@gamil.com','JR','Family');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM address_book;
++-----------+----------+-----------+---------+-------------+--------+--------------+-----------------------+-----------+--------------+
+| firstName | lastName | address   | city    | state       | zip    | phone_Number | email_Id              | bookName  | contactType  |
++-----------+----------+-----------+---------+-------------+--------+--------------+-----------------------+-----------+--------------+
+| Akanksha  | Jadhav   | Ghatkopar |  Mumbai | Maharashtra |  12345 |   1234567890 | ak@gamil.com          | AJ        | Family       |
+| Vishangi  | Dabir    | Panvel    | Mumbai  | Maharashtra |  11254 |       123455 | vishangi@gmail.com    | VD        | Friend       |
+| Ashwini   | Rathod   | kalyan    | Mumbai  | Maharashtra | 456785 |       810880 | rashwini510@gmail.com | Bridgelabz| Professional |
+| Neha      | Patel    | Dhule     | Dhule   | Maharshtra  | 424002 |       785885 | pneha@gmail.com       | NP        | Friend       |
+| Jayesh    | Rathod   | Dhule     | Dhule   | Maharashtra |  42446 |        85575 | jsrathod@gamil.com    | JR        | Family       |
++-----------+----------+-----------+---------+-------------+--------+--------------+-----------------------+-----------+--------------+
+5 rows in set (0.00 sec)
